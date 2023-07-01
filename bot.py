@@ -336,7 +336,7 @@ async def start_bot(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "• /retry Regenerate the answer",
         "",
         "Always start the conversation:",
-        "Dark Bard, {your prompt}",
+        "dark bard, {your prompt}",
         "",
         "This is a paid subscription bot under Black Market Premium Ⓡ plan. Subscribe https://t.me/+Y-DLNmGzVW9hZDI1",
         
