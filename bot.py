@@ -335,7 +335,8 @@ async def start_bot(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "• /reset Reset the chat history",
         "• /retry Regenerate the answer",
         "",
-        "Non subscription users will just interact with normal Google Bard.",
+        "Enable DarkBARD via jailbreak prompt:",
+        "https://drive.google.com/file/d/1sE56FOKt-5tCbja9z4rdOUzONVWSWJUd/view?usp=sharing",
         "",
         "This is a paid subscription bot under Black Market Premium Ⓡ plan. Subscribe https://t.me/+Y-DLNmGzVW9hZDI1",
         
