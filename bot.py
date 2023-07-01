@@ -238,7 +238,7 @@ async def show_settings(update: Update, context: ContextTypes.DEFAULT_TYPE):
             f"Cutoff: <b>{session.cutoff}</b>",
             "",
             "Commands:",
-            "• /mode to use Google Bard",
+            "• /mode to use DarkBARD",
             "• [/model NAME] to change model",
             "• [/temp VALUE] to set temperature",
             "• [/cutoff VALUE] to adjust cutoff",
@@ -328,15 +328,17 @@ async def change_cutoff(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def start_bot(update: Update, context: ContextTypes.DEFAULT_TYPE):
     welcome_strs = [
-        "Welcome to <b>DarkBARD</b> the dark side of Google Bard AI, lets talk to me!",
+        "Welcome to <b>DarkBARD</b> the dark mode of Google Bard AI, lets talk to me!",
         "",
         "Commands:",
         "• /id Get your chat identifier",
         "• /reset Reset the chat history",
         "• /retry Regenerate the answer",
-        "• /seg Send message in segments for Claude",
-        "• /mode Switch mode between DarkBARD & Claude",
-        "• /settings View DarkBARD & Claude settings",
+        "",
+        "Non subscription users will just interact with normal Google Bard.",
+        "",
+        "This is a paid subscription bot under Black Market Premium Ⓡ plan. Subscribe https://t.me/+Y-DLNmGzVW9hZDI1",
+        
     ]
     print(f"[i] {update.effective_user.username} started the bot")
     await update.message.reply_text("\n".join(welcome_strs), parse_mode=ParseMode.HTML)
@@ -359,9 +361,6 @@ async def post_init(application: Application):
         [
             BotCommand("/reset", "Reset the chat history"),
             BotCommand("/retry", "Regenerate the answer"),
-            BotCommand("/seg", "Send message in segments for Claude"),
-            BotCommand("/mode", "Switch mode between DarkBARD & Claude"),
-            BotCommand("/settings", "View DarkBARD & Claude settings"),
             BotCommand("/help", "Get help message"),
         ]
     )
