@@ -328,15 +328,18 @@ async def change_cutoff(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def start_bot(update: Update, context: ContextTypes.DEFAULT_TYPE):
     welcome_strs = [
-        "Welcome to <b>DarkBARD</b> the dark mode of Google Bard AI, lets talk to me!",
+        "I am <b>DarkBARD</b> the dark mode of Google Bard AI, lets talk to me!",
         "",
         "Commands:",
         "• /id Get your chat identifier",
         "• /reset Reset the chat history",
         "• /retry Regenerate the answer",
         "",
-        "Enable DarkBARD via jailbreak prompt:",
-        "https://drive.google.com/file/d/1sE56FOKt-5tCbja9z4rdOUzONVWSWJUd/view?usp=sharing",
+        "1. Enable DarkBARD via prompt:",
+        "https://drive.google.com/file/d/1GSru4LwtrYymIFwVWqGnMHyd62ZzQgnx/view?usp=sharing",
+        "",
+        "2. Always start the conversation:",
+        "Dark Bard, {your prompt}",
         "",
         "This is a paid subscription bot under Black Market Premium Ⓡ plan. Subscribe https://t.me/+Y-DLNmGzVW9hZDI1",
         
