@@ -281,7 +281,7 @@ async def change_model(update: Update, context: ContextTypes.DEFAULT_TYPE):
     mode, session = get_session(update, context)
 
     if mode == "Bard":
-        return await update.message.reply_text("❌ Invalid option for Google Bard.")
+        return await update.message.reply_text("❌ Invalid option for DarkBARD.")
     if len(context.args) != 1:
         return await update.message.reply_text("❌ Please provide a model name.")
 
@@ -297,7 +297,7 @@ async def change_temperature(update: Update, context: ContextTypes.DEFAULT_TYPE)
     mode, session = get_session(update, context)
 
     if mode == "Bard":
-        return await update.message.reply_text("❌ Invalid option for Google Bard.")
+        return await update.message.reply_text("❌ Invalid option for DarkBARD.")
     if len(context.args) != 1:
         return await update.message.reply_text("❌ Please provide a temperature value.")
 
@@ -314,7 +314,7 @@ async def change_cutoff(update: Update, context: ContextTypes.DEFAULT_TYPE):
     mode, session = get_session(update, context)
 
     if mode == "Bard":
-        return await update.message.reply_text("❌ Invalid option for Google Bard.")
+        return await update.message.reply_text("❌ Invalid option for DarkBARD.")
     if len(context.args) != 1:
         return await update.message.reply_text("❌ Please provide a cutoff value.")
 
@@ -328,15 +328,15 @@ async def change_cutoff(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def start_bot(update: Update, context: ContextTypes.DEFAULT_TYPE):
     welcome_strs = [
-        "Welcome to <b>Claude & Bard Telegram Bot</b>",
+        "Welcome to <b>DarkBARD</b> the dark side of Google Bard AI, lets talk to me!",
         "",
         "Commands:",
-        "• /id to get your chat identifier",
-        "• /reset to reset the chat history",
-        "• /retry to regenerate the answer",
-        "• /seg to send message in segments",
-        "• /mode to switch between Claude & Bard",
-        "• /settings to show Claude & Bard settings",
+        "• /id Get your chat identifier",
+        "• /reset Reset the chat history",
+        "• /retry Regenerate the answer",
+        "• /seg Send message in segments for Claude",
+        "• /mode Switch mode between DarkBARD & Claude",
+        "• /settings View DarkBARD & Claude settings",
     ]
     print(f"[i] {update.effective_user.username} started the bot")
     await update.message.reply_text("\n".join(welcome_strs), parse_mode=ParseMode.HTML)
@@ -359,9 +359,9 @@ async def post_init(application: Application):
         [
             BotCommand("/reset", "Reset the chat history"),
             BotCommand("/retry", "Regenerate the answer"),
-            BotCommand("/seg", "Send message in segments"),
-            BotCommand("/mode", "Switch between Claude & Bard"),
-            BotCommand("/settings", "Show Claude & Bard settings"),
+            BotCommand("/seg", "Send message in segments for Claude"),
+            BotCommand("/mode", "Switch mode between DarkBARD & Claude"),
+            BotCommand("/settings", "View DarkBARD & Claude settings"),
             BotCommand("/help", "Get help message"),
         ]
     )
