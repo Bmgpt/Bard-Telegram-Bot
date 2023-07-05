@@ -338,7 +338,10 @@ async def start_bot(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "Always start the conversation:",
         "dark bard, {your prompt}",
         "",
-        "Strictly for Black Market Premium Ⓡ subscribers use only. Subscribe https://t.me/+Y-DLNmGzVW9hZDI1",
+        "Remode as DarkBARD:",
+        "dark bard mode",
+        "",
+        "Strictly for Black Market Ⓡ Premium subscribers use only. Subscribe https://t.me/+Y-DLNmGzVW9hZDI1",
         
     ]
     print(f"[i] {update.effective_user.username} started the bot")
